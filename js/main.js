@@ -57,9 +57,10 @@ $(document).ready(function () {
   $('.top__slider').slick({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 2500,
     fade: true,
     autoplay: true,
+      autoplaySpeed: 2000,
     cssEase: 'ease-in-out',
     nextArrow: '<div class="top__slider-next top__slider-arrow "></div>',
     prevArrow: '<div class="top__slider-prev top__slider-arrow"></div>',
@@ -67,27 +68,47 @@ $(document).ready(function () {
   $('.direction__slider').slick({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1500,
  
     autoplay: true,
+      autoplaySpeed: 1600,
     cssEase: 'ease-in-out',
     nextArrow: '<div class="direction__slider-next direction__slider-arrow "></div>',
     prevArrow: '<div class="direction__slider-prev direction__slider-arrow"></div>',
+      responsive: [
+    {
+      breakpoint: 1029,
+      settings: {
+        arrows: false,
+      }
+    } 
+  ]
   });
   $('.reviews__slider').slick({
     dots: true,
     infinite: true,
-    speed: 500,
- 
-    slidesToShow: 2,
+     slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: true,
-    cssEase: 'ease-in-out',
+     cssEase: 'linear',
     nextArrow: '<div class="reviews__slider-next reviews__slider-arrow "></div>',
     prevArrow: '<div class="reviews__slider-prev reviews__slider-arrow"></div>',
+    responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+    slidesToShow: 1,
+
+        // arrows: false,
+      }
+    } 
+  ]
   });
 });
 $(document).ready(function () {
+    $(window).scroll(function () {
+    slideShow();
+    closeHide();
+  });
   function slideShow(thisThing) {
     $(thisThing).parents('.option').find('.option-list').slideToggle();
   }
@@ -101,6 +122,8 @@ $(document).ready(function () {
   function closeHide() {
     $('.option-list').slideUp();
     $('.find__form').removeClass('__show');
+       $('.burger__menu').removeClass('__clicked');
+   $('.menu').removeClass('__show');
   }
   $(document).keyup(function (e) {
     if (e.keyCode === 27) {
@@ -123,4 +146,9 @@ $(document).ready(function () {
     counter++;
     $(this).text(counter);
   });
+ $('.burger__menu').on('click', function () {
+   $('.burger__menu').toggleClass('__clicked');
+   $('.menu').toggleClass('__show');
+ });
+  
 });

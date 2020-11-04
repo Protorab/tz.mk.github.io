@@ -25,7 +25,7 @@
 
   <body>
     <header>
-      <div class="wrapper header__wrapper ">
+      <div class="wrapper header__wrapper header__wrapper-desktop">
         <div class="option">
           <span class="option-title">Язык</span>
           <div class="option-group">
@@ -41,7 +41,7 @@
         <a href="#" class="blind__icon">
           <img src="img/watch.svg" alt="">
         </a>
-        <div class="header__contacts">
+        <div class="header__contacts header__contacts-desktop">
           <a href="tel:+375 (44) 755-01-01">+375 (44) 755-01-01</a>
 
           <a class="header__contacts-icon" href="tel:+375 (44) 755-01-01">
@@ -65,13 +65,30 @@
           <img src="img/Logo.png" alt="">
         </a>
         <nav class="menu">
-          <a href="#" class="menu__item">Главная</a>
+          <div class="header__wrapper header__wrapper-mobile">
+            <div class="option">
+              <span class="option-title">Язык</span>
+              <div class="option-group">
+                <span class="option-selected">русский</span>
+                <div class="option-icon"><img src="img/option__icon.svg" alt=""></div>
+                <ul class="option-list">
+                  <li>русский</li>
+                  <li>английский</li>
+                  <li>малоазийский</li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="blind__icon">
+              <img src="img/watch.svg" alt="">
+            </a>
+          </div>
+          <a href="" class="menu__item">Главная</a>
           <a href="#about" class="menu__item">О нас</a>
-          <a href="#about" class="menu__item">Услуги</a>
+          <a href="#services" class="menu__item">Услуги</a>
           <a href="#tariffs" class="menu__item">Тарифы</a>
           <a href="#infocenter" class="menu__item">Инфоцентр</a>
           <a href="#contacts" class="menu__item">Контакты</a>
-          <a href="#contacts" class="menu__item">
+          <span class="find">
             <a href="#" class="find__form-icon">
               <img src="img/find__icon.svg" alt="">
             </a>
@@ -82,19 +99,43 @@
                 <label for="find__submit" class="find__form-label">найти</label>
                 <input required placeholder="введите текст" type="text"></div>
             </form>
-          </a>
+          </span>
+          <div class="header__contacts header__contacts-mobile">
+            <a href="tel:+375 (44) 755-01-01">+375 (44) 755-01-01</a>
+            <div class="header__contacts-icons">
+              <a class="header__contacts-icon" href="tel:+375 (44) 755-01-01">
+                <img src="img/A1.svg" alt="">
+              </a>
+              <a class="desktop header__contacts-icon" href="viber://chat?number=+375 (44) 755-01-01">
+                <img src="img/viber.svg" alt="">
+              </a>
+              <a class="mobile header__contacts-icon" href="viber://add?number=120345678910">
+                <img src="img/viber.svg" alt="">
+              </a>
+              <a class="header__contacts-icon" href="whatsapp://send?phone=+375 (44) 755-01-01">
+                <img src="img/whatsapp.svg" alt="">
+              </a>
+            </div>
+
+            <a href="tel:+375 (29) 550-01-01">+375 (29) 550-01-01</a>
+            <a class="header__contacts-icon" href="tel:+375 (29) 550-01-01">
+              <img src="img/mts.svg" alt="">
+            </a>
+          </div>
 
         </nav>
+        <div class="burger__menu"><span></span></div>
       </div>
     </header>
 
     <main role="main">
 
       <section class="top__section">
-
         <div class="top__slider">
           <div class="top__slider-item">
-            <img class="top__slider-bg" src="img/top__slider/img__1.jpg" alt="">
+            <div class="top__slider-bg">
+              <img class="" src="img/top__slider/img__1.jpg" alt="">
+            </div>
             <div class="top__slider-wrapper wrapper">
               <div class="top__slider-title">
                 Взыскание дебиторской <br> задолженности
@@ -106,7 +147,9 @@
             </div>
           </div>
           <div class="top__slider-item">
-            <img class="top__slider-bg" src="img/top__slider/img__2.jpg" alt="">
+            <div class="top__slider-bg">
+              <img class="" src="img/top__slider/img__2.jpg" alt="">
+            </div>
             <div class="top__slider-wrapper wrapper">
               <div class="top__slider-title">Регистрация ООО</div>
               <div class="top__slider-text">
@@ -116,7 +159,9 @@
             </div>
           </div>
           <div class="top__slider-item">
-            <img class="top__slider-bg" src="img/top__slider/img__3.jpg" alt="">
+            <div class="top__slider-bg">
+              <img class="" src="img/top__slider/img__3.jpg" alt="">
+            </div>
             <div class="top__slider-wrapper wrapper">
               <div class="top__slider-title">Ликвидация предприятия</div>
               <div class="top__slider-text">
@@ -126,7 +171,9 @@
             </div>
           </div>
           <div class="top__slider-item">
-            <img class="top__slider-bg" src="img/top__slider/img__4.jpg" alt="">
+            <div class="top__slider-bg">
+              <img class="" src="img/top__slider/img__4.jpg" alt="">
+            </div>
             <div class="top__slider-wrapper wrapper">
               <div class="top__slider-title">Юридическая консультация</div>
               <div class="top__slider-text">
@@ -136,7 +183,9 @@
             </div>
           </div>
           <div class="top__slider-item">
-            <img class="top__slider-bg" src="img/top__slider/img__5.jpg" alt="">
+            <div class="top__slider-bg">
+              <img class="" src="img/top__slider/img__5.jpg" alt="">
+            </div>
             <div class="top__slider-wrapper wrapper">
               <div class="top__slider-title">Юридический аутсорсинг</div>
               <div class="top__slider-text">
@@ -147,7 +196,8 @@
           </div>
 
         </div>
-
+      </section>
+      <section class="content__section">
         <div class="advantages__top">
           <div class="advantages__top-item">
             <div class="advantages__top-img">
@@ -201,7 +251,7 @@
           </div>
         </div>
 
-        <div class="wrapper direction__wrapper">
+        <div id="about" class="wrapper direction__wrapper">
           <div class="direction__title title">Основные направления деятельности</div>
           <div class="direction__type">
             <div class="direction__type-item">
@@ -482,7 +532,7 @@
           </div>
         </div>
         <img class="services__bg" src="img/discription__img.jpg" alt="">
-        <div class="wrapper more__wrapper">
+        <div id="services" class="wrapper more__wrapper">
           <div class="title">Перечень оказываемых услуг</div>
           <div class="services__more">
             <div class="services__more-item ">
@@ -678,7 +728,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer id="contacts"  >
       <div class="footer__cols">
         <div class="footer__col">
           <div class="title title-footer">ООО “МК-ПРАВОВЫЕ
@@ -798,23 +848,26 @@
         </div>
         <div class="footer__col">
           <div class="footer__col-title">Время работы</div>
-          <div class="footer__col-item item__time">
-            <div class="item-subtitle">Прием посетителей
+          <div class="item-wrapp">
+            <div class="footer__col-item item__time">
+              <div class="item-subtitle">Прием посетителей
+              </div>
+              Ежедневно с 8.00 до 19.00
+              Выходной: суббота - воскресенье.
             </div>
-            Ежедневно с 8.00 до 19.00
-            Выходной: суббота - воскресенье.
-          </div>
-          <div class="footer__col-item item__time">
-            <div class="item-subtitle">Прием звонков</div>
-            Ежедневно с 8.00 до 22.00
-            Без выходных
-          </div>
-          <div class="footer__col-item item__time">
-            <div class="item-subtitle">Онлайн консультант</div>
-            Круглосуточно 24/7
-            Без выходных
+            <div class="footer__col-item item__time">
+              <div class="item-subtitle">Прием звонков</div>
+              Ежедневно с 8.00 до 22.00
+              Без выходных
+            </div>
+            <div class="footer__col-item item__time">
+              <div class="item-subtitle">Онлайн консультант</div>
+              Круглосуточно 24/7
+              Без выходных
 
+            </div>
           </div>
+
         </div>
       </div>
       <div class="developer__section">
